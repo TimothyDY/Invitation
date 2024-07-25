@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding | Please Come</title>
+    <link rel="stylesheet" href="invitation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <script src="dark.js"></script>
+    <script src="countdown.js"></script>
+    <script src="confetti.js"></script>
+	<script>
+		const start = () => {
+			setTimeout(function() {
+				spark.start()
+			}, 500); // 500 is the time to start the spark (500 = 0.5 sec)
+		};
+		const stop = () => {
+			setTimeout(function() {
+				spark.stop()
+			}, 7500); // 7500 is the time to stop the spark (7500 = 7.5 sec)
+		};
+		start();
+	</script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>T & C</h1>
+            <div class="button"><span class="theme"></span></div>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="page">
+            <div class="profiles">
+                <div class="circle1"></div><div class="heart">♥</div><div class="circle2"></div>
+                <!-- <img src="assets/hard.png" alt="Timothy"><img src="assets/cram.png" alt="Cramorant"> -->
+            </div>
+            <div class="text">
+                <h3>Timothy - - - - - - - - - - Cramorant</h3>
+                <h5>Welcome to Our Wedding Website.</h5>
+                <p>We are delighted to invite you to witness and celebrate the marriage of Timothy & Cramorant. Please peruse the site for details on location, schedule and more.</p>
+            </div>
+        </div>
+        <div class="page">
+            <div class="location">
+                <h2>The event will be held near the Moai statues</h2>
+                <a href="https://www.google.com/maps/dir//Emi+Moi+Rupa,+Isla+de+Pascua,+Valpara%C3%ADso,+Cile/@-27.0857304,-109.3892831,14z/data=!4m16!1m7!3m6!1s0x9947e5665446c849:0x3ae9638eeff65aed!2sEmi+Moi+Rupa!8m2!3d-27.0855741!4d-109.3919906!16s%2Fg%2F11h0tf9ml7!4m7!1m0!1m5!1m1!1s0x9947e5665446c849:0x3ae9638eeff65aed!2m2!1d-109.3919906!2d-27.0855741?entry=ttu"><img src="assets/moai.png" alt="moai"></a>
+            </div>
+        </div>
+        <div class="page">
+            <div class="countdown">
+                <h2>It will be held on July 19th 2025</h2>
+                <div class="counter"><div id="days"></div>:<div id="hours"></div>:<div id="minutes"></div>:<div id="seconds"></div></div>
+                <h3>Come celebrate with us at the reception and feel the love.</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

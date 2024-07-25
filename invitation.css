@@ -1,0 +1,454 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow:
+    -1px -1px 0 rgb(125, 100, 0),
+    1px -1px 0 rgb(125, 100, 0),
+    -1px 1px 0 rgb(125, 100, 0),
+    1px 1px 0 rgb(125, 100, 0);
+    color: rgb(250, 200, 0);
+    background-color: rgb(0, 0, 255);
+}
+
+nav{
+    font-weight: bold;
+    width: 100vw;
+    height: 60px;
+    font-family: 'Courgette', cursive;
+    line-height: 60px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    color: rgb(250, 200, 0);
+    background-image: url(assets/navLightWide.png);
+    background-position: center center;
+    background-size: 100vw 60px;
+    background-repeat: no-repeat;
+}
+
+.dark nav{
+    background-image: url(assets/navDarkWide.png);
+}
+
+nav h1{
+    margin-left: 25px;
+    margin-right: 25px;
+    letter-spacing: 2px;
+}
+
+nav .button{
+    position: fixed;
+    top: 4px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    border: 3px solid black;
+    text-align: center;
+    line-height: 50px;
+    overflow-y: hidden;
+}
+
+.dark nav .button{
+    background-color: black;
+    border: 3px solid white;
+}
+
+nav .button:hover{
+    background-color: black;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.dark nav .button:hover{
+    background-color: white;
+    border: 3px solid white;
+}
+
+nav .button span{
+    font-size: 20px;
+}
+
+nav .button span.theme::after{
+    color: rgb(255, 255, 0);
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    content: "☀";
+}
+
+.dark nav .button span.theme::after{
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+    content: "⚫";
+}
+
+.content{
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 60px;
+}
+
+/* .dark .content{
+    text-shadow:
+    -1px -1px 0 rgb(225, 200, 100),
+    1px -1px 0 rgb(225, 200, 100),
+    -1px 1px 0 rgb(225, 200, 100),
+    1px 1px 0 rgb(225, 200, 100);
+} */
+
+.page{
+    height: 600px;
+    width: 100vw;
+    background-image: url(assets/bgLightWide.png);
+    background-position: center center;
+    background-size: 100vw 600px;
+    background-repeat: no-repeat;
+}
+
+.dark .page{
+    background-image: url(assets/bgDarkWide.png);
+}
+
+/* .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+} */
+
+/* .profiles img{
+    height: 200px;
+    width: auto;
+    padding: 10px;
+    margin-top: 150px;
+} */
+
+@keyframes beat{
+    0%{
+        font-size: 100px;
+    }
+    37.5%{
+        font-size: 100px;
+    }
+    42.5%{
+        font-size: 75px
+    }
+    50%{ 
+        font-size: 175px;
+    }
+    57.5%{
+        font-size: 75px
+    }
+    62.5%{
+        font-size: 100px;
+    }
+    100%{
+        font-size: 100px;
+    }
+}
+
+.profiles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 75px;
+}
+
+.profiles .heart{
+    text-shadow:
+    -1px -1px 0 rgb(200, 50, 150),
+    1px -1px 0 rgb(200, 50, 150),
+    -1px 1px 0 rgb(200, 50, 150),
+    1px 1px 0 rgb(200, 50, 150);
+    color: rgb(255, 0, 200);
+    font-size: 100px;
+    animation-name: beat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.profiles .circle1{
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    border: 3px solid rgb(250, 200, 0);
+    background-image: url(assets/hard.png);
+    background-position: center 0;
+    background-size: 225px auto;
+    background-repeat: no-repeat;
+}
+
+.dark .profiles .circle1{
+    background-image: url(assets/hardInvert.png);
+}
+
+.profiles .circle2{
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    border: 3px solid rgb(250, 200, 0);
+    background-image: url(assets/cram.png);
+    background-position: center 5px;
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+}
+
+.dark .profiles .circle2{
+    background-image: url(assets/cramInvert.png);
+}
+
+.text h3{
+    font-size: 20pt;
+}
+
+.text h5{
+    font-size: 30pt;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.text p{
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 20pt;
+    letter-spacing: 1px;
+}
+
+.location h2{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 75px;
+    padding-bottom: 25px;
+}
+
+.location a{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 390px;
+    width: 293px;
+}
+
+.location a img{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 390px;
+    width: 293px;
+}
+
+.countdown h2{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 125px;
+    padding-bottom: 100px;
+    font-size: 30px;
+}
+
+.countdown h3{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 25px;
+}
+
+.countdown .counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 992px){
+
+}
+
+@media only screen and (max-width: 768px){
+
+    nav{
+        background-image: url(assets/navLight.png);
+    }
+    
+    .dark nav{
+        background-image: url(assets/navDark.png);
+    }
+
+    nav .button{
+        position: fixed;
+        top: 4px;
+        right: 6px;
+    }
+
+    .page{
+        height: 600px;
+        width: 100vw;
+        background-image: url(assets/bgLight.png);
+        background-position: center center;
+        background-size: 100vw 600px;
+        background-repeat: no-repeat;
+    }
+
+    .dark .page{
+        background-image: url(assets/bgdark.png);
+    }
+
+    @keyframes beat{
+        0%{
+            font-size: 60px;
+        }
+        37.5%{
+            font-size: 60px;
+        }
+        42.5%{
+            font-size: 40px
+        }
+        50%{ 
+            font-size: 100px;
+        }
+        57.5%{
+            font-size: 40px
+        }
+        62.5%{
+            font-size: 60px;
+        }
+        100%{
+            font-size: 60px;
+        }
+    }
+    
+    .profiles{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+    }
+    
+    .profiles .heart{
+        text-shadow:
+        -1px -1px 0 rgb(200, 50, 150),
+        1px -1px 0 rgb(200, 50, 150),
+        -1px 1px 0 rgb(200, 50, 150),
+        1px 1px 0 rgb(200, 50, 150);
+        color: rgb(255, 0, 200);
+        font-size: 100px;
+        animation-name: beat;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .profiles .circle1{
+        height: 125px;
+        width: 125px;
+        border-radius: 125px;
+        border: 3px solid rgb(250, 200, 0);
+        background-image: url(assets/hard.png);
+        background-position: center 0;
+        background-size: 150px auto;
+        background-repeat: no-repeat;
+    }
+java
+    .dark .profiles .circle1{
+        background-image: url(assets/hardInvert.png);
+    }
+    
+    .profiles .circle2{
+        height: 125px;
+        width: 125px;
+        border-radius: 125px;
+        border: 3px solid rgb(250, 200, 0);
+        background-image: url(assets/cram.png);
+        background-position: center 5px;
+        background-size: 125px auto;
+        background-repeat: no-repeat;
+    }
+
+    .dark .profiles .circle2{
+        background-image: url(assets/cramInvert.png);
+    }
+
+    .text h3{
+        font-size: 15pt;
+    }    
+    
+    .text h5{
+        font-size: 15pt;
+        margin-top: 100px;
+        margin-bottom: 25px;
+    }
+    
+    .text p{
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 12pt;
+        letter-spacing: 1px;
+    }
+    
+    .location h2{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+    
+    .location a img{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        height: 390px;
+        width: auto;
+    }
+
+    .countdown h2{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 125px;
+        padding-bottom: 100px;
+        font-size: 30px;
+    }
+    
+    .countdown h3{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        font-size: 20px;
+    }
+    
+    .countdown .counter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+
+}
