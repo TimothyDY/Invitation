@@ -313,7 +313,7 @@ nav .button span.theme::after{
     }
 
     .dark .page{
-        background-image: url(assets/bgdark.png);
+        background-image: url(assets/bgDark.png);
     }
 
     @keyframes beat{
@@ -372,7 +372,7 @@ nav .button span.theme::after{
         background-size: 150px auto;
         background-repeat: no-repeat;
     }
-java
+
     .dark .profiles .circle1{
         background-image: url(assets/hardInvert.png);
     }
